@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/LANDING-HECHA-EN-ANTIGRAVITY-SOLUGAN/',
+  base: '/LANDING-SOLUGAN/',
   plugins: [react()],
 })
