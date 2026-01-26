@@ -122,19 +122,19 @@ const App = () => {
             <span className="font-bold text-xl tracking-tight text-slate-900">SOLUGAN SG</span>
           </div>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             <a
               href="#tienda"
-              className="font-bold text-xs uppercase tracking-widest text-slate-600 hover:text-red-700 transition-colors"
+              className="font-bold text-sm uppercase tracking-widest text-slate-600 hover:text-red-700 transition-colors"
             >
               Nuestra Tienda
             </a>
             <a
               href={WHATSAPP_URL}
               target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2.5 rounded-full font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-red-900/20 uppercase text-xs"
+              className="flex items-center gap-3 bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-red-900/20 uppercase text-xs xl:text-sm"
             >
-              <WhatsAppIcon size={18} />
+              <WhatsAppIcon size={20} />
               Agendar Diagnóstico
             </a>
           </div>
@@ -181,16 +181,16 @@ const App = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10" />
         </div>
 
-        <div className="container mx-auto max-w-7xl px-4 relative z-20">
-          <div className="max-w-4xl">
+        <div className="container mx-auto max-w-[1400px] px-4 relative z-20">
+          <div className="max-w-5xl">
             <div className="inline-flex items-center gap-2 bg-red-700/90 backdrop-blur-sm px-4 py-1.5 rounded-full mb-6 border border-red-500/30 shadow-lg animate-fade-in-up">
               <Award size={18} />
               <span className="text-xs md:text-sm font-bold uppercase tracking-wider">Jan Alexander González - 15+ años liderando el campo</span>
             </div>
-            <h1 className="text-4xl md:text-7xl xl:text-8xl font-black leading-[1.1] mb-6 drop-shadow-sm uppercase tracking-tighter">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black leading-[1.1] mb-6 drop-shadow-sm uppercase tracking-tighter">
               Tecnifique su Finca, <br /><span className="text-red-600">Multiplique su Ganancia</span>
             </h1>
-            <p className="text-lg md:text-2xl xl:text-3xl text-slate-200 mb-10 font-light leading-relaxed max-w-3xl">
+            <p className="text-lg md:text-2xl lg:text-3xl text-slate-200 mb-10 font-light leading-relaxed max-w-4xl">
               Descubra la <strong>Estrategia ETGI</strong>: El método de tecnificación inteligente que unifica genética, drones y software para maximizar su producción real.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
@@ -242,11 +242,11 @@ const App = () => {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-24 xl:py-32 bg-white text-slate-900">
-        <div className="container mx-auto max-w-7xl px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 xl:mb-24">
-              <h2 className="text-3xl md:text-5xl xl:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tight leading-tight">
+      <section className="py-24 lg:py-32 bg-white text-slate-900">
+        <div className="container mx-auto max-w-[1400px] px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 lg:mb-24">
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-slate-900 mb-6 uppercase tracking-tight leading-tight">
                 ¿Su finca es un negocio o <span className="text-red-700 font-black">un gasto constante?</span>
               </h2>
               <div className="w-24 h-2 bg-red-700 mx-auto rounded-full" />
@@ -341,12 +341,12 @@ const App = () => {
         </div>
 
         {/* New Tienda Section */}
-        <div id="tienda" className="container mx-auto max-w-7xl px-4 mt-32 xl:mt-48">
-          <div className="text-center mb-16 xl:mb-24">
-            <h2 className="text-4xl md:text-5xl xl:text-7xl font-black mb-6 uppercase tracking-tighter italic">Nuestra Tienda</h2>
-            <p className="text-slate-400 text-lg xl:text-2xl max-w-3xl mx-auto font-light">Explora nuestro catálogo completo de herramientas de precisión.</p>
+        <div id="tienda" className="container mx-auto max-w-[1500px] px-4 mt-32 lg:mt-48">
+          <div className="text-center mb-16 lg:mb-24">
+            <h2 className="text-4xl md:text-5xl lg:text-8xl font-black mb-6 uppercase tracking-tighter italic">Nuestra Tienda</h2>
+            <p className="text-slate-400 text-lg lg:text-2xl max-w-4xl mx-auto font-light">Explora nuestro catálogo completo de herramientas de precisión.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 xl:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6 lg:gap-8">
             {products.map((product) => (
               <div
                 key={product.id}
@@ -414,12 +414,12 @@ const App = () => {
       </section>
 
       {/* Bonuses */}
-      <section className="py-24 xl:py-32 bg-red-700 text-white relative overflow-hidden text-center">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] -ml-48 -mt-48" />
-        <div className="container mx-auto max-w-7xl px-4">
-          <h2 className="text-4xl md:text-6xl xl:text-8xl font-black mb-16 xl:mb-24 italic uppercase tracking-tighter leading-none">3 Regalos Exclusivos para Usted</h2>
+      <section className="py-24 lg:py-40 bg-red-700 text-white relative overflow-hidden text-center">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] -ml-64 -mt-64" />
+        <div className="container mx-auto max-w-[1400px] px-4">
+          <h2 className="text-4xl md:text-6xl lg:text-9xl font-black mb-16 lg:mb-32 italic uppercase tracking-tighter leading-none">3 Regalos Exclusivos para Usted</h2>
 
-          <div className="grid md:grid-cols-3 gap-10 xl:gap-12 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10 lg:gap-16 max-w-7xl mx-auto">
             <div className="bg-white/10 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/20 hover:bg-white/20 transition-all shadow-xl">
               <div className="text-red-200 text-xs font-black uppercase mb-4 tracking-widest">Bono de Sistematización</div>
               <h4 className="text-2xl font-black mb-4 uppercase tracking-tighter leading-tight">Software Ganadero SG</h4>
@@ -446,12 +446,12 @@ const App = () => {
       </section>
 
       {/* Main CTA Block */}
-      <section className="py-24 xl:py-32 bg-slate-50">
-        <div className="container mx-auto max-w-7xl px-4">
-          <div className="max-w-6xl mx-auto bg-white rounded-[3rem] xl:rounded-[5rem] shadow-2xl shadow-slate-200 border border-slate-100 overflow-hidden">
-            <div className="p-8 md:p-20 xl:p-32 text-center">
-              <h2 className="text-4xl md:text-5xl xl:text-7xl font-black mb-6 uppercase tracking-tighter italic leading-none text-slate-900">Su Finca, Su Futuro.</h2>
-              <p className="text-xl xl:text-2xl text-slate-500 mb-12 xl:mb-20 max-w-3xl mx-auto font-light leading-relaxed">No agende una cita si no está dispuesto a cambiar su forma de producir. El éxito ganadero requiere decisión y tecnología.</p>
+      <section className="py-24 lg:py-40 bg-slate-50">
+        <div className="container mx-auto max-w-[1400px] px-4">
+          <div className="max-w-7xl mx-auto bg-white rounded-[3rem] lg:rounded-[6rem] shadow-2xl shadow-slate-200 border border-slate-100 overflow-hidden">
+            <div className="p-8 md:p-20 lg:p-40 text-center">
+              <h2 className="text-4xl md:text-5xl lg:text-9xl font-black mb-8 uppercase tracking-tighter italic leading-none text-slate-900">Su Finca, Su Futuro.</h2>
+              <p className="text-xl lg:text-3xl text-slate-500 mb-12 lg:mb-24 max-w-4xl mx-auto font-light leading-relaxed">No agende una cita si no está dispuesto a cambiar su forma de producir. El éxito ganadero requiere decisión y tecnología.</p>
 
               <div className="grid md:grid-cols-2 gap-4 mb-16 text-left max-w-3xl mx-auto">
                 {[
@@ -580,27 +580,27 @@ const App = () => {
       {selectedProduct && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-md" onClick={() => setSelectedProduct(null)}></div>
-          <div className="relative bg-white text-slate-900 w-full max-w-2xl rounded-[2.5rem] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200">
+          <div className="relative bg-white text-slate-900 w-full max-w-4xl lg:max-w-5xl rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200">
             <button
-              className="absolute top-6 right-6 p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors z-10"
+              className="absolute top-6 right-6 lg:top-8 lg:right-8 p-3 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors z-10"
               onClick={() => setSelectedProduct(null)}
             >
-              <X size={24} />
+              <X size={28} />
             </button>
             <div className="flex flex-col md:flex-row h-full">
-              <div className="w-full md:w-1/2 bg-slate-50 p-12 flex items-center justify-center">
-                <img src={selectedProduct.image} alt={selectedProduct.name} className="max-h-[300px] w-auto object-contain drop-shadow-2xl" />
+              <div className="w-full md:w-1/2 bg-slate-50 p-12 lg:p-20 flex items-center justify-center">
+                <img src={selectedProduct.image} alt={selectedProduct.name} className="max-h-[300px] lg:max-h-[500px] w-auto object-contain drop-shadow-2xl" />
               </div>
-              <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
-                <span className="text-red-700 font-bold uppercase tracking-widest text-[10px] mb-2">{selectedProduct.category}</span>
-                <h3 className="text-3xl font-black uppercase tracking-tighter mb-4 leading-none">{selectedProduct.name}</h3>
-                <p className="text-slate-600 mb-8 font-light leading-relaxed italic">"{selectedProduct.desc}"</p>
+              <div className="w-full md:w-1/2 p-10 lg:p-20 flex flex-col justify-center">
+                <span className="text-red-700 font-bold uppercase tracking-widest text-[10px] lg:text-xs mb-2">{selectedProduct.category}</span>
+                <h3 className="text-3xl lg:text-6xl font-black uppercase tracking-tighter mb-4 lg:mb-8 leading-none">{selectedProduct.name}</h3>
+                <p className="text-slate-600 mb-8 lg:mb-12 font-light leading-relaxed italic text-lg lg:text-2xl">"{selectedProduct.desc}"</p>
                 <a
                   href={`https://api.whatsapp.com/send?phone=573147084328&text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(selectedProduct.name)}`}
                   target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 bg-red-700 hover:bg-red-800 text-white p-4 rounded-2xl font-black uppercase transition-all hover:scale-105 active:scale-95 shadow-lg shadow-red-900/20"
+                  className="flex items-center justify-center gap-3 bg-red-700 hover:bg-red-800 text-white p-6 lg:p-8 rounded-2xl lg:rounded-[2rem] font-black uppercase transition-all hover:scale-105 active:scale-95 shadow-lg shadow-red-900/20 text-xl"
                 >
-                  <WhatsAppIcon size={20} />
+                  <WhatsAppIcon size={24} />
                   Cotizar Ahora
                 </a>
               </div>
