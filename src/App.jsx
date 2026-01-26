@@ -112,7 +112,7 @@ const App = () => {
     <div className="min-h-screen font-sans text-slate-900 bg-white selection:bg-red-100 selection:text-red-900">
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/90 backdrop-blur-sm py-4 shadow-sm'}`}>
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto max-w-7xl px-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img
               src={logo}
@@ -181,16 +181,16 @@ const App = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-3xl">
+        <div className="container mx-auto max-w-7xl px-4 relative z-20">
+          <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-red-700/90 backdrop-blur-sm px-4 py-1.5 rounded-full mb-6 border border-red-500/30 shadow-lg animate-fade-in-up">
               <Award size={18} />
               <span className="text-xs md:text-sm font-bold uppercase tracking-wider">Jan Alexander González - 15+ años liderando el campo</span>
             </div>
-            <h1 className="text-4xl md:text-7xl font-black leading-[1.1] mb-6 drop-shadow-sm uppercase tracking-tighter">
+            <h1 className="text-4xl md:text-7xl xl:text-8xl font-black leading-[1.1] mb-6 drop-shadow-sm uppercase tracking-tighter">
               Tecnifique su Finca, <br /><span className="text-red-600">Multiplique su Ganancia</span>
             </h1>
-            <p className="text-lg md:text-2xl text-slate-200 mb-10 font-light leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-2xl xl:text-3xl text-slate-200 mb-10 font-light leading-relaxed max-w-3xl">
               Descubra la <strong>Estrategia ETGI</strong>: El método de tecnificación inteligente que unifica genética, drones y software para maximizar su producción real.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
@@ -224,8 +224,8 @@ const App = () => {
 
       {/* Stats Section */}
       <section className="py-16 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 xl:gap-20">
             {[
               { label: "Años de Experiencia", val: "15+" },
               { label: "Resultados Comprobados", val: "SIEMPRE" },
@@ -242,11 +242,11 @@ const App = () => {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-24 bg-white text-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight leading-tight">
+      <section className="py-24 xl:py-32 bg-white text-slate-900">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16 xl:mb-24">
+              <h2 className="text-3xl md:text-5xl xl:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tight leading-tight">
                 ¿Su finca es un negocio o <span className="text-red-700 font-black">un gasto constante?</span>
               </h2>
               <div className="w-24 h-2 bg-red-700 mx-auto rounded-full" />
@@ -266,15 +266,15 @@ const App = () => {
                   </div>
                 ))}
               </div>
-              <div className="bg-slate-900 p-10 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-red-700/20 rounded-full blur-3xl -mr-16 -mt-16" />
-                <h3 className="text-2xl font-bold mb-6 italic uppercase tracking-tighter">La cruda realidad ganadera</h3>
-                <p className="text-slate-300 leading-relaxed mb-8 text-lg font-light">
+              <div className="bg-slate-900 p-10 xl:p-16 rounded-[2.5rem] xl:rounded-[4rem] text-white shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-red-700/20 rounded-full blur-3xl -mr-24 -mt-24" />
+                <h3 className="text-2xl xl:text-4xl font-bold mb-6 italic uppercase tracking-tighter leading-tight">La cruda realidad ganadera</h3>
+                <p className="text-slate-300 leading-relaxed mb-8 text-lg xl:text-xl font-light">
                   Cada mes que pospone la tecnificación, está dejando dinero en la mesa. La ineficiencia biológica de su hato le está costando millones al año en terneros no nacidos y kilos no ganados.
                 </p>
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 text-center">
-                  <p className="font-bold text-red-500 mb-1 tracking-wider uppercase text-xs">EL DIAGNÓSTICO:</p>
-                  <p className="text-white font-medium uppercase tracking-tighter">No es su ganado el problema. Es la falta de un sistema integral de precisión.</p>
+                <div className="bg-white/10 backdrop-blur-sm p-6 xl:p-10 rounded-2xl xl:rounded-3xl border border-white/10 text-center">
+                  <p className="font-bold text-red-500 mb-1 tracking-wider uppercase text-xs xl:text-sm">EL DIAGNÓSTICO:</p>
+                  <p className="text-white font-medium uppercase tracking-tighter xl:text-2xl">No es su ganado el problema. Es la falta de un sistema integral de precisión.</p>
                 </div>
               </div>
             </div>
@@ -283,13 +283,13 @@ const App = () => {
       </section>
 
       {/* Solutions / Products Grid */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 italic uppercase tracking-tighter">Tecnología del Siglo XXI</h2>
-          <p className="text-slate-400 text-xl max-w-2xl mx-auto font-light leading-relaxed">Nuestra artillería tecnológica para dominar el mercado ganadero con precisión absoluta.</p>
+      <section className="py-24 xl:py-32 bg-slate-900 text-white">
+        <div className="container mx-auto max-w-7xl px-4 text-center mb-20">
+          <h2 className="text-4xl md:text-6xl xl:text-7xl font-black mb-6 italic uppercase tracking-tighter">Tecnología del Siglo XXI</h2>
+          <p className="text-slate-400 text-xl xl:text-2xl max-w-3xl mx-auto font-light leading-relaxed">Nuestra artillería tecnológica para dominar el mercado ganadero con precisión absoluta.</p>
         </div>
 
-        <div className="container mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container mx-auto max-w-7xl px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
           {[
             {
               icon: <Plane size={40} />,
@@ -341,12 +341,12 @@ const App = () => {
         </div>
 
         {/* New Tienda Section */}
-        <div id="tienda" className="container mx-auto px-4 mt-32">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter italic">Nuestra Tienda</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Explora nuestro catálogo completo de herramientas de precisión.</p>
+        <div id="tienda" className="container mx-auto max-w-7xl px-4 mt-32 xl:mt-48">
+          <div className="text-center mb-16 xl:mb-24">
+            <h2 className="text-4xl md:text-5xl xl:text-7xl font-black mb-6 uppercase tracking-tighter italic">Nuestra Tienda</h2>
+            <p className="text-slate-400 text-lg xl:text-2xl max-w-3xl mx-auto font-light">Explora nuestro catálogo completo de herramientas de precisión.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 xl:gap-8">
             {products.map((product) => (
               <div
                 key={product.id}
@@ -365,9 +365,9 @@ const App = () => {
       </section>
 
       {/* Expert Profile */}
-      <section className="py-24 bg-white overflow-hidden text-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+      <section className="py-24 xl:py-32 bg-white overflow-hidden text-slate-900">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 xl:gap-24">
             <div className="w-full lg:w-1/2 relative group">
               <div className="absolute inset-0 bg-red-700 rounded-[3rem] rotate-3 group-hover:rotate-1 transition-transform shadow-xl" />
               <div className="relative aspect-[4/5] bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white flex flex-col items-center justify-center">
@@ -380,10 +380,10 @@ const App = () => {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight uppercase tracking-tighter">
+              <h2 className="text-4xl md:text-5xl xl:text-7xl font-black mb-6 leading-tight uppercase tracking-tighter">
                 Asesoría con <span className="text-red-700">Rigor Científico</span> y Experiencia de Campo
               </h2>
-              <p className="text-xl text-slate-600 mb-8 font-light italic leading-relaxed">
+              <p className="text-xl xl:text-2xl text-slate-600 mb-8 font-light italic leading-relaxed">
                 "Mi enfoque no es solo médico, es empresarial. Llevo 15 años demostrando que tecnificar es el único camino para que el ganadero deje de ser un esclavo de su finca y pase a ser un gerente de su negocio."
               </p>
 
@@ -414,12 +414,12 @@ const App = () => {
       </section>
 
       {/* Bonuses */}
-      <section className="py-24 bg-red-700 text-white relative overflow-hidden text-center">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-32 -mt-32" />
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black mb-16 italic uppercase tracking-tighter leading-none">3 Regalos Exclusivos para Usted</h2>
+      <section className="py-24 xl:py-32 bg-red-700 text-white relative overflow-hidden text-center">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] -ml-48 -mt-48" />
+        <div className="container mx-auto max-w-7xl px-4">
+          <h2 className="text-4xl md:text-6xl xl:text-8xl font-black mb-16 xl:mb-24 italic uppercase tracking-tighter leading-none">3 Regalos Exclusivos para Usted</h2>
 
-          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10 xl:gap-12 max-w-7xl mx-auto">
             <div className="bg-white/10 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/20 hover:bg-white/20 transition-all shadow-xl">
               <div className="text-red-200 text-xs font-black uppercase mb-4 tracking-widest">Bono de Sistematización</div>
               <h4 className="text-2xl font-black mb-4 uppercase tracking-tighter leading-tight">Software Ganadero SG</h4>
@@ -446,12 +446,12 @@ const App = () => {
       </section>
 
       {/* Main CTA Block */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto bg-white rounded-[3rem] shadow-2xl shadow-slate-200 border border-slate-100 overflow-hidden">
-            <div className="p-8 md:p-20 text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter italic leading-none text-slate-900">Su Finca, Su Futuro.</h2>
-              <p className="text-xl text-slate-500 mb-12 max-w-2xl mx-auto font-light leading-relaxed">No agende una cita si no está dispuesto a cambiar su forma de producir. El éxito ganadero requiere decisión y tecnología.</p>
+      <section className="py-24 xl:py-32 bg-slate-50">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="max-w-6xl mx-auto bg-white rounded-[3rem] xl:rounded-[5rem] shadow-2xl shadow-slate-200 border border-slate-100 overflow-hidden">
+            <div className="p-8 md:p-20 xl:p-32 text-center">
+              <h2 className="text-4xl md:text-5xl xl:text-7xl font-black mb-6 uppercase tracking-tighter italic leading-none text-slate-900">Su Finca, Su Futuro.</h2>
+              <p className="text-xl xl:text-2xl text-slate-500 mb-12 xl:mb-20 max-w-3xl mx-auto font-light leading-relaxed">No agende una cita si no está dispuesto a cambiar su forma de producir. El éxito ganadero requiere decisión y tecnología.</p>
 
               <div className="grid md:grid-cols-2 gap-4 mb-16 text-left max-w-3xl mx-auto">
                 {[
@@ -485,9 +485,9 @@ const App = () => {
       </section>
 
       {/* Guarantee */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-slate-50 rounded-[3rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-12 border border-slate-100 shadow-sm">
+      <section className="py-20 xl:py-32 bg-white">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="bg-slate-50 rounded-[3rem] xl:rounded-[5rem] p-10 md:p-16 xl:p-24 flex flex-col md:flex-row items-center gap-12 xl:gap-20 border border-slate-100 shadow-sm">
             <div className="shrink-0">
               <div className="w-40 h-40 md:w-56 md:h-56 rounded-full bg-white shadow-2xl flex flex-col items-center justify-center border-8 border-red-50 text-red-700 relative">
                 <ShieldCheck size={80} strokeWidth={1.5} />
@@ -535,8 +535,8 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 bg-slate-900 text-white">
-        <div className="container mx-auto px-4">
+      <footer className="py-20 xl:py-32 bg-slate-900 text-white">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-12 pb-12 border-b border-slate-800">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center text-white font-black text-3xl shadow-xl">SG</div>
@@ -560,14 +560,21 @@ const App = () => {
         </div>
       </footer>
 
-      {/* Floating CTA for Mobile */}
-      <a
-        href={WHATSAPP_URL}
-        target="_blank" rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[60] bg-red-700 text-white p-5 rounded-full shadow-[0_20px_50px_rgba(185,28,28,0.5)] border-2 border-white/20 animate-pulse active:scale-90 transition-transform"
-      >
-        <WhatsAppIcon size={32} />
-      </a>
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] flex flex-col items-end gap-3">
+        <div className="bg-white px-4 py-2 rounded-xl shadow-xl border border-slate-100 text-slate-900 text-xs font-bold uppercase tracking-wider animate-in fade-in slide-in-from-right-4 duration-500 hidden md:block">
+          ¿Dudas? Chat Directo
+        </div>
+        <a
+          href={WHATSAPP_URL}
+          target="_blank" rel="noopener noreferrer"
+          className="bg-[#25D366] text-white p-4 md:p-6 rounded-full shadow-[0_10px_40px_rgba(37,211,102,0.4)] border-2 border-white/20 hover:scale-110 active:scale-95 transition-all group relative overflow-hidden"
+          title="Contactar por WhatsApp"
+        >
+          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+          <WhatsAppIcon size={32} className="relative z-10" />
+        </a>
+      </div>
 
       {/* Product Modal */}
       {selectedProduct && (
