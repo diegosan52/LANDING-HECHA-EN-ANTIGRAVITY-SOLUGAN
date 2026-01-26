@@ -60,8 +60,26 @@ const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573147084328&text=Quiero%20la%20asesoria%20de%20SOLUGAN%20SG";
+
+  const products = [
+    { id: 1, name: "Báscula EW7i", image: basculaEW7i, category: "Pesaje", desc: "Báscula de alta precisión para control de peso animal." },
+    { id: 2, name: "Báscula JR-5000", image: basculaJR5000, category: "Pesaje", desc: "Indicador de pesaje avanzado con memoria y Bluetooth." },
+    { id: 3, name: "Báscula S3", image: basculaS3, category: "Pesaje", desc: "Sistema de pesaje compacto y fácil de usar." },
+    { id: 4, name: "Báscula XR-5000", image: basculaXR5000, category: "Pesaje", desc: "La báscula más completa para gestión de datos intensiva." },
+    { id: 5, name: "Ecógrafo Dawei Neo", image: ecografoDawei, category: "Reproducción", desc: "Ecografía veterinaria de alta resolución." },
+    { id: 6, name: "Ecógrafo L60", image: ecografoL60, category: "Reproducción", desc: "Equipo portátil para diagnóstico rápido en campo." },
+    { id: 7, name: "Ecógrafo MX5 Go", image: ecografoMX5Go, category: "Reproducción", desc: "Tecnología inalámbrica para ecografía móvil." },
+    { id: 8, name: "Ecógrafo MX5", image: ecografoMX5, category: "Reproducción", desc: "Ecógrafo de última generación para especialistas." },
+    { id: 9, name: "Ecógrafo S7+", image: ecografoS7Plus, category: "Reproducción", desc: "Precisión diagnóstica superior en reproducción." },
+    { id: 10, name: "Ecógrafo S7", image: ecografoS7, category: "Reproducción", desc: "Calidad de imagen excepcional para el hato." },
+    { id: 11, name: "Lector SYCREADER", image: lectorSycreader, category: "Identificación", desc: "Lector de chips eficiente y ergonómico." },
+    { id: 12, name: "Lector XRS2i", image: lectorXRS2i, category: "Identificación", desc: "Lector de alta gama con pantalla a color." },
+    { id: 13, name: "Aplicador Metálico", image: aplicadorMetalico, category: "Accesorios", desc: "Herramienta duradera para aplicación de microchips." },
+    { id: 14, name: "Microchip Intradérmico", image: microchipIntradermico, category: "Identificación", desc: "Identificación animal segura e inviolable." }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,7 +122,13 @@ const App = () => {
             <span className="font-bold text-xl tracking-tight text-slate-900">SOLUGAN SG</span>
           </div>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
+            <a
+              href="#tienda"
+              className="font-bold text-xs uppercase tracking-widest text-slate-600 hover:text-red-700 transition-colors"
+            >
+              Nuestra Tienda
+            </a>
             <a
               href={WHATSAPP_URL}
               target="_blank" rel="noopener noreferrer"
@@ -126,6 +150,13 @@ const App = () => {
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-slate-100 p-4 absolute top-full left-0 w-full shadow-xl animate-in slide-in-from-top duration-300">
+            <a
+              href="#tienda"
+              className="block py-4 text-center font-bold uppercase text-slate-900 border-b border-slate-50 mb-4"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Nuestra Tienda
+            </a>
             <a
               href={WHATSAPP_URL}
               target="_blank" rel="noopener noreferrer"
@@ -197,7 +228,7 @@ const App = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
             {[
               { label: "Años de Experiencia", val: "15+" },
-              { label: "Fincas Asistidas", val: "500+" },
+              { label: "Resultados Comprobados", val: "SIEMPRE" },
               { label: "Clientes Satisfechos", val: "98%" },
               { label: "Soporte Técnico", val: "24/7" }
             ].map((stat, i) => (
@@ -308,6 +339,29 @@ const App = () => {
             </div>
           ))}
         </div>
+
+        {/* New Tienda Section */}
+        <div id="tienda" className="container mx-auto px-4 mt-32">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter italic">Nuestra Tienda</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Explora nuestro catálogo completo de herramientas de precisión.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="bg-slate-800/30 border border-slate-700 rounded-2xl p-4 hover:border-red-600 transition-all cursor-pointer group flex flex-col items-center text-center"
+                onClick={() => setSelectedProduct(product)}
+              >
+                <div className="h-40 w-full flex items-center justify-center mb-4 p-2">
+                  <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform" />
+                </div>
+                <h4 className="text-sm font-bold uppercase tracking-tight mb-2">{product.name}</h4>
+                <span className="text-[10px] bg-red-700/20 text-red-500 px-2 py-0.5 rounded-full font-bold uppercase border border-red-500/20">{product.category}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Expert Profile */}
@@ -369,7 +423,7 @@ const App = () => {
             <div className="bg-white/10 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/20 hover:bg-white/20 transition-all shadow-xl">
               <div className="text-red-200 text-xs font-black uppercase mb-4 tracking-widest">Bono de Sistematización</div>
               <h4 className="text-2xl font-black mb-4 uppercase tracking-tighter leading-tight">Software Ganadero SG</h4>
-              <p className="text-red-50 mb-8 opacity-80 leading-relaxed italic font-light text-sm uppercase">Licencia de prueba por 3 meses para empezar a medir todo desde mañana mismo.</p>
+              <p className="text-red-50 mb-8 opacity-80 leading-relaxed italic font-light text-sm uppercase">Acompañamiento estratégico inicial para empezar a medir todo desde mañana mismo.</p>
               <div className="py-2 px-5 bg-white text-red-700 rounded-full font-black text-[10px] inline-block uppercase tracking-tight shadow-md">INCLUIDO EN ASISTENCIA</div>
             </div>
 
@@ -514,6 +568,39 @@ const App = () => {
       >
         <WhatsAppIcon size={32} />
       </a>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-md" onClick={() => setSelectedProduct(null)}></div>
+          <div className="relative bg-white text-slate-900 w-full max-w-2xl rounded-[2.5rem] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200">
+            <button
+              className="absolute top-6 right-6 p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors z-10"
+              onClick={() => setSelectedProduct(null)}
+            >
+              <X size={24} />
+            </button>
+            <div className="flex flex-col md:flex-row h-full">
+              <div className="w-full md:w-1/2 bg-slate-50 p-12 flex items-center justify-center">
+                <img src={selectedProduct.image} alt={selectedProduct.name} className="max-h-[300px] w-auto object-contain drop-shadow-2xl" />
+              </div>
+              <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
+                <span className="text-red-700 font-bold uppercase tracking-widest text-[10px] mb-2">{selectedProduct.category}</span>
+                <h3 className="text-3xl font-black uppercase tracking-tighter mb-4 leading-none">{selectedProduct.name}</h3>
+                <p className="text-slate-600 mb-8 font-light leading-relaxed italic">"{selectedProduct.desc}"</p>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=573147084328&text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(selectedProduct.name)}`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 bg-red-700 hover:bg-red-800 text-white p-4 rounded-2xl font-black uppercase transition-all hover:scale-105 active:scale-95 shadow-lg shadow-red-900/20"
+                >
+                  <WhatsAppIcon size={20} />
+                  Cotizar Ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
