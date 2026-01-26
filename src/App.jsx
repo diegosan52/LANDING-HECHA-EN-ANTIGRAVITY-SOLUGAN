@@ -1,3 +1,4 @@
+// SOLUGAN Landing Page - Latest optimization for Desktop
 import React, { useState, useEffect } from 'react';
 import {
   CheckCircle,
